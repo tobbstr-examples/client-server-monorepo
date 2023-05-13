@@ -1,0 +1,18 @@
+# Describes the protoc plugins required during the code-generation process
+# https://docs.buf.build/tour/generate-code
+version: v1
+plugins:
+  # protoc-gen-go plugin, generates go types
+  - name: go
+    # opt is a comma separated list of options. Whitespaces are not allowed. According to the Buf docs
+    # it's also possible to specify the options as an array where each option is an element of that array.
+    # That works locally, but deployments get broken because of a "publish proto schemas to the registry" GitHub
+    # action. This means the only option to specify multiple options is by using a comma separated string.
+    opt: paths=import,module=github.com/tobbstr-examples/client-server-monorepo/server
+    out: .
+  
+  # protoc-gen-go-grpc plugin, generates go gRPC stubs
+  - name: go-grpc
+    opt: paths=import,module=github.com/tobbstr-examples/client-server-monorepo/server
+    out: .
+  

@@ -1,0 +1,18 @@
+syntax = "proto3";
+package tobbstr.helloworld.v1;
+option go_package = "github.com/tobbstr-examples/client-server-monorepo/server/pb/v1";
+
+service Auditer {
+    rpc LastAccess(LastAccessRequest) returns (LastAccessResponse) {}
+}
+
+message LastAccessRequest {}
+
+message LastAccessResponse {
+    Person person = 1;
+}
+
+message Person {
+    string name = 1;
+    uint32 age = 2;
+}

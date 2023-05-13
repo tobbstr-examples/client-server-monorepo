@@ -1,0 +1,13 @@
+# Linting configuration for proto files
+# See https://docs.buf.build/tour/lint-your-api
+# See https://docs.buf.build/configuration/v1/buf-yaml
+version: v1
+lint:
+  use:
+    - DEFAULT
+  except:
+    - PACKAGE_DIRECTORY_MATCH
+
+breaking:
+  use:
+    - FILE

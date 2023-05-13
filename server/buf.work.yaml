@@ -1,0 +1,8 @@
+# Lists all the directories that contain proto files used by the service
+# See https://docs.buf.build/tour/configure-and-build#configure-buf
+# See https://docs.buf.build/configuration/v1/buf-work-yaml
+version: v1
+directories:
+  # This directory contains gRPC spec
+  - ./api/grpc/v1
+  
