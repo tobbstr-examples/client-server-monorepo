@@ -17,7 +17,7 @@ func TestClient(t *testing.T) {
 	ctx := context.Background()
 	cli, closeClient, err := NewGrpcClient(ctx, "localhost:1997", "test-client")
 	require.NoError(err)
-	defer closeClient()
+	defer closeClient() // nolint:errcheck
 
 	// When
 	resp, err := cli.LastAccess(ctx, &v1.LastAccessRequest{})
