@@ -15,5 +15,4 @@ message LastAccessResponse {
 message Person {
     string name = 1;
     uint32 age = 2;
-    uint32 weight = 3;
 }
