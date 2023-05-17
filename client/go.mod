@@ -4,7 +4,7 @@ go 1.19
 
 require (
 	github.com/stretchr/testify v1.8.2
-	github.com/tobbstr-examples/client-server-monorepo/shared v0.0.0-20230513204226-21fb14f32fa3
+	github.com/tobbstr-examples/client-server-monorepo/shared v0.0.2
 	google.golang.org/grpc v1.55.0
 )
 

@@ -3,7 +3,7 @@ module github.com/tobbstr-examples/client-server-monorepo
 go 1.19
 
 require (
-	github.com/tobbstr-examples/client-server-monorepo/shared v0.0.0-20230513204226-21fb14f32fa3
+	github.com/tobbstr-examples/client-server-monorepo/shared v0.0.2
 	google.golang.org/grpc v1.55.0
 )
 
